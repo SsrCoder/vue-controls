@@ -13,47 +13,47 @@
 </template>
 
 <script lang="ts">
-import { Vue, Prop, Component } from 'vue-property-decorator'
+import { Vue, Prop, Component } from "vue-property-decorator";
 
 @Component
 export default class LoginStyle1 extends Vue {
   @Prop(String)
-  title = 'Login Style1'
+  title = "Login Style1";
 
-  canIn = true
-  canOut = false
+  canIn = true;
+  canOut = false;
 
   mouseEnter(event: MouseEvent) {
     if (this.canIn) {
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
 
       const x = event.clientX - target.offsetLeft,
-        y = event.clientY - target.offsetTop
+        y = event.clientY - target.offsetTop;
 
-      const span = this.$refs.span as HTMLElement
-      span.style.left = x + 'px'
-      span.style.top = y + 'px'
-      span.classList.add('in')
-      span.classList.remove('out')
-      this.canIn = false
-      this.canOut = true
+      const span = this.$refs.span as HTMLElement;
+      span.style.left = x + "px";
+      span.style.top = y + "px";
+      span.classList.add("in");
+      span.classList.remove("out");
+      this.canIn = false;
+      this.canOut = true;
     }
   }
 
   mouseLeave(event: MouseEvent) {
     if (this.canOut) {
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
 
       const x = event.clientX - target.offsetLeft,
-        y = event.clientY - target.offsetTop
+        y = event.clientY - target.offsetTop;
 
-      const span = this.$refs.span as HTMLElement
-      span.style.left = x + 'px'
-      span.style.top = y + 'px'
-      span.classList.add('out')
-      span.classList.remove('in')
-      this.canIn = true
-      this.canOut = false
+      const span = this.$refs.span as HTMLElement;
+      span.style.left = x + "px";
+      span.style.top = y + "px";
+      span.classList.add("out");
+      span.classList.remove("in");
+      this.canIn = true;
+      this.canOut = false;
     }
   }
 }
