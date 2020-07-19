@@ -43,5 +43,5 @@ jobs:
       # 清空已经存在的文件
       - run: ossutil rm -rf oss://ssrcoder-controls/*
       # 将dist目录下的文件复制到oss中
-      - run: ossutil cp -rf ./dist/* oss://ssrcoder-controls
+      - run: ossutil cp -rf ./dist oss://ssrcoder-controls/
         
