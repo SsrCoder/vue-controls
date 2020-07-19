@@ -5,7 +5,7 @@
       <form action="" method="post">
         <input type="text" class="tbx" placeholder="username" />
         <input type="password" class="tbx" placeholder="password" />
-        <input type="submit" class="sub" value="登录" />
+        <input type="submit" class="sub" value="登录" @click.prevent="" />
       </form>
       <span ref="span"></span>
     </div>
